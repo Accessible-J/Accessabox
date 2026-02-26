@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "AccessaBox",
+  "version": "1.0",
+  "description": "Injects an accessibility toolbar into pages.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "AccessaboxIcon.svg",
+    "48": "AccessaboxIcon.svg",
+    "128": "AccessaboxIcon.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["mini.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
